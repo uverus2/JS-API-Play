@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet">
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container  my-3 py-2">
+
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center"> Calculate your BMI here </h1>
+
+            </div>
+        </div>
+
+
+        <div class="row my-3 py-2">
+            <div class="col-12 text-center">
+
+                <button id="metrics" type="button" class="btn btn-lg btn-primary">Metrics</button>
+                <button id="imperial" type="button" class="btn btn-lg btn-primary">Imperial</button>
+
+            </div>
+        </div>
+
+        <form id="form" action="#" name="test-form" method="POST">
+            <div class="row  my-3 py-2 form-group">
+
+                <div class="col-12 text-center">
+
+                    <!-- Metric Fields -->
+
+                    <div class="input-group mb-3 metrics-fields">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Enter your Weight (kg)</span>
+                        </div>
+                        <input type="number" id="kgInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <div class="input-group mb-3 metrics-fields">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Enter your Height (cm)</span>
+                        </div>
+                        <input type="number" id="cmInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <!-- Imperial Fields -->
+
+                    <div class="input-group mb-3 imperial-fields" style="display:none;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Enter your Weight (lbs)</span>
+                        </div>
+                        <input type="number" id="lsbInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+                    </div>
+
+                    <div class="input-group mb-3 imperial-fields" style="display:none;">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-default">Enter your Height (in)</span>
+                        </div>
+                        <input type="number" id="inInput" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-      default">
+                    </div>
+
+                </div>
+                <!-- End of col  -->
+
+                <div class="col-12 text-left">
+
+                    <input type="submit" id="button" value="Calculate Now" class="btn btn-lg btn-primary"></input>
+                </div>
+
+                <div class="col-12 mt-2 text-left">
+
+                    <button id="reset" type="button" class="btn btn-lg btn-danger">Reset Score</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 id="result"> </h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-3 py-2">
+        <div class="row">
+            <div class="col-12">
+                <div class="row text-center">
+                    <div class="col-3">
+                        <h4>Underweight</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Normal Weight</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Overweight</h4>
+                    </div>
+                    <div class="col-3">
+                        <h4>Obese</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="progress text-center" style="font-size:16px;height:100%;">
+
+                    <div class="progress-bar py-2" role="progressbar" style="width: 25%;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                        < 18.5</div>
+
+                            <div class="progress-bar py-2  bg-success" role="progressbar" style="width: 25%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">18.5 to 24.9</div>
+                            <div class="progress-bar py-2 bg-warning" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"> 25 to 29.9</div>
+                            <div class="progress-bar py-2 bg-danger" role="progressbar" style="width: 25%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">30 > </div>
+                    </div>
+                </div>
+
+                <div class="col-12 py-2">
+                    <div class="row text-center">
+                        <div class="col-3 control-size">
+                            <ion-icon class="all" id="underW" name="person"></ion-icon>
+                        </div>
+                        <div class="col-3 control-size">
+                            <ion-icon class="all" id="normalW" name="person"></ion-icon>
+                        </div>
+                        <div class="col-3 control-size">
+                            <ion-icon class="all" id="overW" name="person"></ion-icon>
+                        </div>
+                        <div class="col-3 control-size">
+                            <ion-icon class="all" id="obeseW" name="person">
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/ionicons@4.5.5/dist/ionicons.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>

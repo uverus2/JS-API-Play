@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container py-5">
+        <div class="row">
+
+            <!-- Intro Col -->
+            <div class="col-12">
+                <h2 class="text-center display-2 pb-3">Morse Code Decoder</h2>
+                <h1 class="text-center">To use it make sure you have 3 spaces between your code words and a single space between each letter </h1>
+                <h1 class="pt-2 text-center">Eg: .... . .-.. .-.. ---&nbsp;&nbsp;&nbsp;.-- --- .-. .-.. -.. </h1>
+            </div>
+
+            <!-- Form Col -->
+            <div class="col-12 py-4 text-center">
+
+                <form id="formDecode" action="">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">Enter Morse Code</span>
+                        </div>
+                        <input type="text" id="value" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <button type="submit" class=" btn btn-lg mt-3 float-left btn-outline-secondary">Decode</button>
+                </form>
+                <!-- End of decoder form -->
+
+            </div>
+
+        </div>
+        <!-- End of main row -->
+
+        <div class="row">
+            <div class="col-12 text-center">
+
+                <h2 class="display-2" id="result"> </h2>
+
+            </div>
+        </div>
+    </div>
+    <!-- End of main container -->
+
+    <div class="container py-5">
+        <div class="row">
+
+            <!-- Intro Col -->
+            <div class="col-12">
+                <h2 class="text-center display-2 pb-3">Morse Code Encoder</h2>
+                <h1 class="text-center">Enter a word or a sentence you would like to convert to morse code </h1>
+                <h1 class="pt-2 text-center">Eg: Hello World </h1>
+            </div>
+
+            <!-- Form Col -->
+            <div class="col-12 py-4 text-center">
+
+                <form id="formEncode" action="">
+                    <div class="input-group input-group-lg">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroup-sizing-lg">Enter Sentence</span>
+                        </div>
+                        <input type="text" id="valueToEncode" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <button type="submit" class=" btn btn-lg mt-3 float-left btn-outline-secondary">Encode</button>
+                </form>
+                <!-- End of decoder form -->
+
+            </div>
+
+        </div>
+        <!-- End of main row -->
+
+        <div class="row mb-3">
+            <div class="col-12 text-center">
+
+                <h2 class="display-2" id="resultEncoder"> </h2>
+
+            </div>
+        </div>
+    </div>
+    <!-- End of main container -->
+    <script src="main.js"></script>
+</body>
+
+
+
+</html>

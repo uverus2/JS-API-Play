@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container py-3">
+
+        <div class="row py-3">
+            <div class="col-12">
+                <h2> Pick your title and add the names to generate your message</h2>
+            </div>
+        </div>
+
+        <!--  form row start -->
+        <div class="row py-3 hide-form">
+            <div class="col-6 offset-2">
+                <form id="form" form-ajax-value="">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">From</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="From">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Name of Victim</label>
+                        <input type="text" class="form-control" id="exampleInputVictim" placeholder="Name of Victim">
+                    </div>
+                    <button id="generate" class="btn btn-primary">Submit</button>
+                    <button id="close" class="btn btn-primary">Close</button>
+                </form>
+            </div>
+        </div>
+        <!--  end form row -->
+        <div class="row bg-light show-element py-4">
+            <div class="col-12 ">
+                <div>
+                    <h1 class="text-left display-4" id="results"> </h1>
+                    <select class="form-control" id="keyWord">
+                    <option value="volvo" selected>From</option>
+                    <option value="Yours Sincerely">Yours Sincerely</option>
+                    <option value="Thanks">Thanks</option>
+                    <option value="Daddy">Daddy</option>
+                    <option value="Mommy">Mommy</option>
+                 </select>
+                </div>
+            </div>
+            <div class="col-12 pt-3">
+                <button class="btn btn-outline-primary btn-lg"> Copy to Clipboard </button>
+            </div>
+        </div>
+
+        <!--  Row 1  -->
+        <div class="row py-3">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote One</h3>
+                        <h4 class="card-text pt-1">Happy Fucking Birthday, :name. From - :from</h4>
+                        <button quote-type=":from&:name" quote-value="bday/" class="btn btn-primary mt-2 say-click"> Say It </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote One</h3>
+                        <h4 class="card-text pt-1">Fuck you, asshole. From - :from</h4>
+                        <button quote-type=":from" quote-value="asshole/" class="btn btn-primary mt-2 say-click"> Say It </button>
+
+                        <span id="here"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Row 2  -->
+        <div class="row py-3">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote Three</h3>
+                        <h4 class="card-text pt-1">:name, do I look like I give a fuck? - From :from</h4>
+                        <button quote-type=":from&:name" quote-value="look/" class="btn btn-primary mt-2 say-click"> Say It </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote Four</h3>
+                        <h4 class="card-text pt-1">Looking for a fuck to give. From - :from</h4>
+                        <button quote-type=":from" quote-value="looking/" class="btn btn-primary mt-2 say-click"> Say It </button>
+
+                        <span id="here"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Row 3  -->
+        <div class="row py-3">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote Five</h3>
+                        <h4 class="card-text pt-1">Fuck off, :name. - :from</h4>
+                        <button quote-type=":from&:name" quote-value="off/" class="btn btn-primary mt-2 say-click"> Say It </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote Six</h3>
+                        <h4 class="card-text pt-1">Ask me if I give a motherfuck ?!! From - :from</h4>
+                        <button quote-type=":from" quote-value="zayn/" class="btn btn-primary mt-2 say-click"> Say It </button>
+                        <span id="here"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Row 4  -->
+        <div class="row py-3">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote Seven</h3>
+                        <h4 class="card-text pt-1">:name, go and take a flying fuck at a rolling donut. From - :from</h4>
+                        <button quote-type=":from&:name" quote-value="donut/" class="btn btn-primary mt-2 say-click"> Say It </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Quote Eight</h3>
+                        <h4 class="card-text pt-1">Maybe. Maybe not. Maybe fuck yourself. From - :from/h4>
+                            <button quote-type=":from" quote-value="maybe/" class="btn btn-primary mt-2 say-click"> Say It </button>
+                            <span id="here"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

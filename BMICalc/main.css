@@ -1,0 +1,11 @@
+#underW,
+#normalW,
+#overW,
+#obeseW {
+    display: none;
+}
+
+.control-size {
+    height: 40px !important;
+    width: 40px !important;
+}
